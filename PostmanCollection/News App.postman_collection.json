@@ -1,0 +1,324 @@
+{
+	"info": {
+		"_postman_id": "a1c6e8e9-cab9-49c6-bfb9-104211b548d7",
+		"name": "News App",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "Register",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"Username\": \"shubham123\",\r\n    \"Email\": \"shubham@gmail.com\",\r\n    \"Password\":\"sd123456\",\r\n    \"PhoneNumber\":1234567890,\r\n    \"Gender\": \"Male\",\r\n    \"Language\": \"English\",\r\n    \"MaritalStatus\": \"Single\",\r\n    \"DOB\": \"2000-08-25\",\r\n    \"TimeOfBirth\": \"08:12\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "localhost:3000/register",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"register"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Login User",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"Email\": \"shubham@gmail.com\",\r\n    \"Password\": \"sd123456\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "localhost:3000/login",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"login"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "viewProfile",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJfaWQiOiI2MjBkZWRiMzQzY2FiY2QyYzRjNTU0MzUiLCJpYXQiOjE2NDUwODAwMTB9.sPTVPD__9oR5cupVrmmc0p8DtVhExKKF2xPJhMQC7NU",
+							"type": "string"
+						}
+					]
+				},
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "localhost:3000/viewProfile",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"viewProfile"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "updateProfile",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJfaWQiOiI2MjBkZWRiMzQzY2FiY2QyYzRjNTU0MzUiLCJpYXQiOjE2NDUwODAwMTB9.sPTVPD__9oR5cupVrmmc0p8DtVhExKKF2xPJhMQC7NU",
+							"type": "string"
+						}
+					]
+				},
+				"method": "PATCH",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"PhoneNumber\": \"1234567891\",\r\n    \"MaritalStatus\": \"Married\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "localhost:3000/updateProfile",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"updateProfile"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "addNews",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"ThumbnailImage\": \"/images/thumb5.jpg\",\r\n    \"Headline\": \"Indian Stock Market is booming\",\r\n    \"Category\": \"Finance\",\r\n    \"AuthorName\": \"Harsh\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "localhost:3000/addNews",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"addNews"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "getAllNews",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "localhost:3000/getAllNews",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"getAllNews"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Sort News/Get Latest News",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "localhost:3000/getLatestNews",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"getLatestNews"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Filter News by Category",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "localhost:3000/getFilterNews/Finance",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"getFilterNews",
+						"Finance"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Search news by any keyword",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "localhost:3000/searchNews/5G",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"searchNews",
+						"5G"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Thumbnail Image1",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "localhost:3000/images/thumb1.jpg",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"images",
+						"thumb1.jpg"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Thumbnail Image 2",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "localhost:3000/images/thumb2.jpg",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"images",
+						"thumb2.jpg"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Thumbnai Image 3",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "localhost:3000/images/thumb3.jpg",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"images",
+						"thumb3.jpg"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Thumbnail Image 4",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "localhost:3000/images/thumb4.jpg",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"images",
+						"thumb4.jpg"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Thumbnail Image 5",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "localhost:3000/images/thumb5.jpg",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"images",
+						"thumb5.jpg"
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}
