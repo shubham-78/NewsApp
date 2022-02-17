@@ -19,8 +19,8 @@ Process for setup the project
 8. Then Login into user
 9. News can be seen without registering on app
 
-Filter ,searching,sorting can be run without logging user.
-I have added comments in each rest endpoints for explaining about whats the endpoint will do.
-Each and every task you asked is completed in workin condition.
-Please feel free to reach out for any queries reardin this project.
-Please dont reject directly. It hurts when you create good project.
+1. Filter ,searching,sorting can be run without logging user.
+2. I have added comments in each rest endpoints for explaining about whats the endpoint will do.
+3. Each and every task you asked is completed in workin condition.
+4. Please feel free to reach out for any queries reardin this project.
+5. Please dont reject directly. It hurts when you create good project.
