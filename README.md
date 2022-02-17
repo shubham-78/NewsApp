@@ -18,6 +18,7 @@ Process for setup the project
 7. First Register the user
 8. Then Login into user
 9. News can be seen without registering on app
+10. Run test cases by npm run test
 
 Further more information
 
